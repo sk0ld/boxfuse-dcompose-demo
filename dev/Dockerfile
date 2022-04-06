@@ -5,5 +5,5 @@ ENV BFAPP=boxfuse-sample-java-war-hello
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git maven
 RUN git clone https://github.com/boxfuse/$BFAPP.git
 WORKDIR /$BFAPP
-RUN mvn package -DskipTests
+RUN mvn package -DskipTests && cp target/*.war /data
 CMD ["mvn"]
