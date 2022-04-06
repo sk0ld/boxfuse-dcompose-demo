@@ -1,0 +1,11 @@
+---
+version: '3'
+services:
+   dev-maven:
+    build: dev/
+    volumes:
+      - ./data:/data
+   prod-tomcat:
+    build: prod/
+    volumes:
+      - ./data:/data
