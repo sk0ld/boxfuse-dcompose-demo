@@ -1,0 +1,1 @@
+Test usage of docker compose with maven & tomcat
