@@ -4,8 +4,8 @@ services:
    dev-maven:
     build: dev/
     volumes:
-      - ./data:/data
+      - ./data:/usr/local/src
    prod-tomcat:
     build: prod/
     volumes:
-      - ./data:/data
+      - ./data/hello-1.0.war:/opt/bitnami/tomcat/webapps
