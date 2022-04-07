@@ -4,8 +4,13 @@ services:
    dev-maven:
     build: dev/
     volumes:
-      - ./data:/usr/local/src
+      - ./data:/usr/share
    prod-tomcat:
-    build: prod/
-    volumes:
-      - ./data/hello-1.0.war:/opt/bitnami/tomcat/webapps
+       build: prod/
+       ports:
+          - "8080:8080"
+       volumes:
+        - ./data:/usr/local/tomcat/webapps
+volumes:
+   data:
+
