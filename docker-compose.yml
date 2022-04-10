@@ -4,10 +4,10 @@ services:
    dev-maven:
     build: dev/
     volumes:
-      - ./data:/usr/share
+      - ./data:/usr/share/src-data/target
    prod-tomcat:
        build: prod/
-       depends on:configs:
+       depends on:
          - dev-maven
        ports:
           - "8080:8080"
