@@ -7,8 +7,11 @@ services:
       - ./data:/usr/share
    prod-tomcat:
        build: prod/
+       depends on:configs:
+         - dev-maven
        ports:
           - "8080:8080"
        volumes:
         - ./data:/usr/local/tomcat/webapps
-
+volumes:
+ ./data
