@@ -6,4 +6,3 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git mave
 WORKDIR /usr/share/src-data
 RUN git clone https://github.com/boxfuse/$BFAPP.git ./
 RUN mvn package -DskipTest
-
