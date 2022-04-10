@@ -12,6 +12,6 @@ services:
      ports:
        - "8080:8080"
      volumes:
-        - data:/usr/local/tomcat/webapps
+       - data:/usr/local/tomcat/webapps
 volumes:
   data:
