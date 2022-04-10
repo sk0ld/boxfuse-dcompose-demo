@@ -2,9 +2,9 @@
 version: '3'
 services:
    dev-maven:
-    build: dev/
-    volumes:
-      - data:/usr/share/src-data/target
+     build: dev/
+     volumes:
+       - data:/usr/share/src-data/target
    prod-tomcat:
      image: tomcat:9.0
      depends_on:
