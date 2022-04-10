@@ -7,5 +7,3 @@ RUN git clone https://github.com/boxfuse/$BFAPP.git
 WORKDIR /$BFAPP
 RUN mvn package -DskipTest
 WORKDIR /$BFAPP/target
-RUN cp *.war /usr/share/
-CMD ["mvn"]
