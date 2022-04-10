@@ -4,14 +4,14 @@ services:
    dev-maven:
     build: dev/
     volumes:
-      - ./data:/usr/share/src-data/target
+      - data:/usr/share/src-data/target
    prod-tomcat:
-       build: prod/
-       depends on:
-         - dev-maven
-       ports:
+     image: tomcat:9.0
+     depends_on:
+       - dev-maven
+     ports:
           - "8080:8080"
-       volumes:
-        - ./data:/usr/local/tomcat/webapps
+     volumes:
+        - data:/usr/local/tomcat/webapps
 volumes:
- ./data
+  data:
