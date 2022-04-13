@@ -4,7 +4,7 @@ services:
    dev-maven:
      build: dev/
    prod-tomcat:
-     image: tomcat:9.0
+     image: tomcat:8.5.13-jre8-alpine
      depends_on:
        - dev-maven
      ports:

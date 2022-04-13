@@ -12,7 +12,7 @@ git clone https://github.com/sk0ld/boxfuse-dcompose-demo.git
 
 cd boxfuse-dcompose-demo/
 
-docker-compose up -d
+docker-compose up -d --no-recreate
 
 To check boxfuse app is working on tomcat:
-http:your_ip_or_hostname:8080/hello-1.0
+http://your_ip_or_hostname:8080/hello-1.0
