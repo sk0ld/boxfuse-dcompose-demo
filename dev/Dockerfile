@@ -1,8 +1,6 @@
-FROM ubuntu:20.04
-ENV TZ=Europe/Moscow
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-ENV BFAPP=boxfuse-sample-java-war-hello
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git maven
-WORKDIR /usr/share/src-data
-RUN git clone https://github.com/boxfuse/$BFAPP.git ./
+FROM maven:3.5.2-jdk-8-alpine
+RUN apk update
+RUN apk add git
+WORKDIR /usr/share/app-src
+RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git ./
 RUN mvn package -DskipTest

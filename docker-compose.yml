@@ -3,6 +3,9 @@ version: '3'
 services:
    dev-maven:
      build: dev/
+     volumes:
+       - app-data:/usr/share/app-src/target/
+
    prod-tomcat:
      image: tomcat:8.5.13-jre8-alpine
      depends_on:
@@ -10,6 +13,7 @@ services:
      ports:
        - "8080:8080"
      volumes:
-       - data:/usr/local/tomcat/webapps
+       - app-data:/usr/local/tomcat/webapps/
+
 volumes:
-  data:
+  app-data:
