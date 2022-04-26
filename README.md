@@ -16,3 +16,7 @@ docker-compose up -d
 
 To check boxfuse app is working on tomcat:
 http://your_ip_or_hostname:8080/hello-1.0
+
+To stop docker container:
+
+docker-compose stop
