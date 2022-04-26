@@ -4,7 +4,7 @@ Tested on Ubuntu 20.04
 
 apt update && apt install -y git docker.io
 
-To install docker compose: follow https://docs.docker.com/compose/install/
+To install docker compose: follow https://docs.docker.com/compose/install/ or https://docs.docker.com.zh.xy2401.com/v17.12/compose/install/#install-compose
 
 Cloning repository & preparing docker image:
 
